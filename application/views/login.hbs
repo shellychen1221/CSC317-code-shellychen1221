@@ -1,0 +1,19 @@
+<main id="form-container">
+    <section>
+        <form id="log-form" class="input-form" action="/users/login" method="post"
+            enctype="application/x-www-form-urlencoded">
+            <fieldset>
+                <legend>Login</legend>
+                <label for="username">Username</label>
+                <input class="input-text" type="text" id="username" name="username" required placeholder="Username">
+                <br>
+                <label for="password">Password</label>
+                <input class="input-text" type="password" id="password" name="password" required placeholder="Password">
+                <br>
+                <label for="res"> <a href="/registration" onclick="">
+                        You don't have an account? Register one!</a></label><br>
+                <button class="input-text" type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </section>
+</main>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div class="header">
+        <h1>Welcome to My Application</h1>
+    </div>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/validation.js"> </script>
+    <title>My Application-Registration</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <div class="menu">
+                <li><a href="index.html">Index</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li>Registration</li>
+                <li><a href="postvideo.html">Post Video</a></li>
+                <li><a href="viewpost.html">View Post</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </div>
+        </ul>
+    </nav>
+    <div class="input-box">
+<main>
+    <section>
+        <form class="reg-form" id="reg-form">
+            <fieldset>
+            
+            <legend>Registration Form</legend>
+            <div class="username-container">
+                <label for="username">Username</label>
+                <input class="input-text" type="text" id="username" name="username"  placeholder="Username">
+                
+                <label id="username-label1"></label><br>
+                <label id="username-label2"></label>
+
+            </div>
+            <div class="email-container">
+                <label for="email">Email</label>
+                <input class="input-text" type="email" id="email" name="email"  required placeholder="Email">
+                <label id="email-label"></label><br>
+            </div>
+            <div class="password-container">
+                <label for="password">Password</label>
+                <input class="input-text" type="password" id="password" name="password" required placeholder="Password">
+                <label id="password-label1"></label>
+                <label id="password-label2"></label>
+                <label id="password-label3"></label>
+                <label id="password-label4"></label>
+                <br>
+            </div>
+            <div class="confirm-password-container">
+                <label for="confirm-password">Confirm Password</label>
+                <input class="input-text" type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm Password">
+                <label id="confirm-password-label"></label>
+                <br>
+            </div>
+            <div class="age-container">
+                <label for="age">
+                <input class="input-text" type="checkbox" id="age" name="age"required >
+                I am 13 years old or older
+                </label>
+                <label id="age-label"></label>
+                <br>
+            </div>
+            <div class="terms-container">
+                <label for="terms">
+                <input class="input-text" type="checkbox" id="terms" name="terms"required >
+                I accept the
+                </label>
+                <label for="link"><a href="#">TOS and Privacy Rules</a></label>
+                <label id="term-label"></label>
+                <br>
+            </div>
+            <button class="button" type="submit" value="Submit">Submit</button>
+        
+        </fieldset>
+    
+        </form>
+    </section>
+</main>
+</div>
+
+<footer class="site-footer">&copy; 2023 Hsin Yu Chen; All rights reserved.</footer>
+
+</body>
+</html>

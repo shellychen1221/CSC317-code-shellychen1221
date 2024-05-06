@@ -1,0 +1,32 @@
+<div id="dropdown-container">
+  <button class="button-dropdown nav-items">Hi, {{users.username}}</button>
+  <div class="dropdown-menu-items">
+    <a class="dropdown-nav" href="/profile">Profile</a>
+    <form action="users/logout" method="post">
+      <button class="dropdown-nav" type="submit">Log out</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const dropdownContainer = document.getElementById("dropdown-container");
+  const dropdownButton = dropdownContainer.querySelector(".button-dropdown");
+  dropdownButton.addEventListener("click", () => {
+    dropdownContainer.classList.toggle("show");
+  });
+</script>
+
+<style>
+  .dropdown-menu-items {
+        display: none;
+        position:absolute;
+        width: 197px;
+        background-color: lightsteelblue;
+        text-align: center;
+
+}
+
+  .show .dropdown-menu-items {
+        display: block;
+  }
+</style>

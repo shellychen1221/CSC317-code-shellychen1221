@@ -1,0 +1,108 @@
+<main id="profile-container">
+  <section>
+  
+      <fieldset>
+        <legend>User Profile</legend>
+        <section>
+          <div>
+            <img class="user-image" src="/public/images/User/user.jpg" />
+            <br>
+            <p class="profile-username">User Name: {{users.username}}</p>
+            <p class="profile-email">Email: {{users.email}}</p>
+              <h2>User's Posts</h2>
+          </div>
+          <div>
+           
+            <ul>
+
+            </ul>
+           
+          </div>
+       
+    </section>
+ </fieldset>
+
+
+ <div class="card-container">
+
+              {{#each recentPosts}}
+              
+              <div class="card">
+               
+                 
+               
+                <img src="/{{thumbnail}}" class="thumbnail">
+                <div class="card-details">
+                  <h2>{{title}}</h2>
+                  <p>{{description}}</p>
+
+                  <a href="/posts/{{id}}" class="detail-button">View Details</a> <br>
+
+                  <form action="/posts/{{id}}/delete" method="post">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="delete-button">Delete</button>
+                  </form>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            
+  
+
+  </section>
+</main>
+
+
+
+
+<style>
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 10px;
+
+  }
+
+  .card {
+    flex-basis: calc(25% - 20px); 
+    margin-bottom: 20px;
+  }
+
+  .thumbnail {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    max-height: 400px; 
+  }
+
+  .card-details {
+    margin-top: 10px;
+
+  }
+  .hh{
+    text-align: center;
+  }
+
+  .detail-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: lightgray;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  .delete-button{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: red;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .detail-button:hover {
+    background-color: #45a049;
+  }
+</style>

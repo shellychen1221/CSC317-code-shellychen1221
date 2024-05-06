@@ -1,0 +1,52 @@
+<div id="flash-message">
+    {{#if messages.error}}
+        <div class="alert alert-danger">{{messages.error}}</div>
+    {{else}}
+        <div class="alert alert-success">{{messages.success}}</div>
+    {{/if}}
+</div>
+
+<style>
+  #flash-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 9999;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  #flash-message.show {
+    opacity: 1;
+  }
+  
+  .alert {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .alert-danger {
+    background-color: #dc3545;
+  }
+  
+  .alert-success {
+    background-color: #28a745;
+  }
+</style>
+
+<script>
+  const flashMessage = document.querySelector('#flash-message');
+  if (flashMessage) {
+    flashMessage.classList.add('show');
+    setTimeout(() => {
+      flashMessage.classList.remove('show');
+    }, 3000);
+  }
+</script>
